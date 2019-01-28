@@ -18,19 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQM-tG-y1h">
-                                <rect key="frame" x="16" y="51" width="343" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQM-tG-y1h">
+                                <rect key="frame" x="16" y="44" width="343" height="120"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Loo-oo-wd0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                 <color key="textColor" red="0.41568627450000001" green="0.074509803920000006" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abp-DH-hFr">
-                                <rect key="frame" x="135" y="179" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image0" translatesAutoresizingMaskIntoConstraints="NO" id="tTR-H9-Zi6">
+                                <rect key="frame" x="16" y="214" width="343" height="538"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abp-DH-hFr">
+                                <rect key="frame" x="121.66666666666669" y="174" width="132" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DU9-Pp-ZYV"/>
+                                    <constraint firstAttribute="width" constant="132" id="Ddr-5h-xm3"/>
+                                </constraints>
                                 <state key="normal" title="Show Message">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -40,6 +48,17 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tTR-H9-Zi6" secondAttribute="trailing" constant="16" id="Ck2-QI-O7D"/>
+                            <constraint firstItem="abp-DH-hFr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IGD-qP-HVn"/>
+                            <constraint firstItem="tQM-tG-y1h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MHm-sK-aVC"/>
+                            <constraint firstItem="tQM-tG-y1h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MXJ-Vu-9aI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tQM-tG-y1h" secondAttribute="trailing" constant="16" id="PLx-Y9-X1L"/>
+                            <constraint firstItem="tTR-H9-Zi6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Yr0-AY-fN4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tTR-H9-Zi6" secondAttribute="bottom" constant="26" id="Z7K-8z-WJb"/>
+                            <constraint firstItem="abp-DH-hFr" firstAttribute="top" secondItem="tQM-tG-y1h" secondAttribute="bottom" constant="10" id="uZ3-RH-0uo"/>
+                            <constraint firstItem="tTR-H9-Zi6" firstAttribute="top" secondItem="abp-DH-hFr" secondAttribute="bottom" constant="10" id="ufo-Dr-s0b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -51,4 +70,7 @@
             <point key="canvasLocation" x="184.80000000000001" y="103.44827586206897"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image0" width="475" height="633"/>
+    </resources>
 </document>
