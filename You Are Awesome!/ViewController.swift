@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var awesomeImageView: UIImageView!
     @IBOutlet weak var messageLabel: UILabel!
+    
     var awesomePlayer = AVAudioPlayer()
     var index = -1
     var imageIndex = -1
@@ -32,7 +33,7 @@ class ViewController: UIViewController {
         return newIndex
     }
     
-    func playSound(soundName: String) {
+    func playSound(soundName: String, audioPlayer: AVAudioPlayer) {
         // Can we load in the file soundName? Let's check.
         if let sound = NSDataAsset(name: soundName) {
             do {
@@ -62,8 +63,6 @@ class ViewController: UIViewController {
                         "You are tremendous!",
                         "You've got the design skills of Jony Ive!"]
         
-        
-        
         // Shows a message
         index = nonRepeatingRandom(lastNumber: index, maxValue: messages.count)
         messageLabel.text = messages[index]
@@ -78,12 +77,10 @@ class ViewController: UIViewController {
         
         // Play a sound
         let soundName = "sound\(soundIndex)"
-        playSound(soundName: soundName)
+        playSound(soundName: soundName, audioPlayer: awesomePlayer)
     }
     
 }
-        
-        
         
         
 //        messageLabel.text = messages.randomElement()!
